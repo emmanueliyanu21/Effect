@@ -1,0 +1,40 @@
+body {
+    background: #333;
+}
+
+.box {
+    background: #fff;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation-name: myanimation;
+    animation-duration: 4s;
+}
+
+@keyframes myanimation {
+    0% {
+        background-color: white;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: red;
+        left: 300px;
+        top: 0px;
+    }
+    50% {
+        background-color: green;
+        left: 300px;
+        top: 300px;
+    }
+    75% {
+        background-color: blue;
+        left: 0px;
+        top: 300px;
+    }
+    100% {
+        background-color: #fff;
+        left: 0px;
+        top: 0px;
+    }
+}

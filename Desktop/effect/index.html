@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <h1 class="animate__animated infinite animate__bounce delay-2s slow-5s" id="yourElement">An animated element</h1>
+
+    <button class="btn btn-danger animate__animated infinite animate__shakeX">Button</button>
+
+    <div class="container">
+        <header class="animate__animated animate__slideInDown text-center bg-primary text-white p-5 my-3">
+            <h1 class="display-4">Animate.css</h1>
+        </header>
+        <section id="section-1" class="bg-faded p-5 my-3 animate__animated animate__slideInLeft">
+            <h1>Section Once</h1>
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam itaque illum officiis mollitia nihil
+                maiores amet odit architecto vel voluptate deserunt fugit, ea sequi, sit distinctio sunt magnam veniam
+                ipsum? </p>
+        </section>
+
+        <section id="section-2" class="bg-faded p-5 my-3 animate__animated animate__slideInRight">
+            <h1 id="anim-head">Section Once</h1>
+            <p id="anim-body"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam itaque illum officiis
+                mollitia nihil
+                maiores
+                amet odit architecto vel voluptate deserunt fugit, ea sequi, sit distinctio sunt magnam veniam ipsum?
+            </p>
+            <button class="btn btn-primary" id="animateBtn">Animate</button>
+        </section>
+
+    </div>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#animateBtn').click(function () {
+                animate('#anim-head', 'bounce');
+                animate('#anim-body', 'rubberBand');
+                return false;
+            })
+
+            // Animate
+            function animate(element, animation) {
+                $(element).addClass('animated ' + animation);
+                var wait = setTimeout(function () {
+                    $(element).removeClass('animated ' + animation);
+                }, 1000);
+            }
+        })
+    </script>
+</body>
+
+</html>
