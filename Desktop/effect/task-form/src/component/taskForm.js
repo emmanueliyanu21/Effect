@@ -22,7 +22,6 @@ class Form extends React.Component {
             taskList: [...prevState.taskList, { index: Math.random(), projectName: "", task: "", taskNotes: "", taskStatus: "" }],
         }));
     }
-
     deteteRow = (index) => {
         this.setState({
             taskList: this.state.taskList.filter((s, sindex) => index !== sindex),
@@ -99,7 +98,7 @@ class Form extends React.Component {
                                         </tbody>
                                         <tfoot>
                                             <tr><td colSpan="4">
-                                                <button onClick={this.addNewRow} type="button" className="btn btn-primary text-center"><i className="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                                <button onClick={this.addNewRow} type="button" className="btn btn-primary pull-left"><i className="fa fa-plus-circle" aria-hidden="true"></i></button>
                                             </td></tr>
                                         </tfoot>
                                     </table>
